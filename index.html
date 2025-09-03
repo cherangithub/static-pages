@@ -3,125 +3,461 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Charan - DevOps Engineer</title>
+    <title>Siva Prasad - DevOps Engineer</title>
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            line-height: 1.6;
+        * {
             margin: 0;
-            padding: 20px;
-            background-color: #f8fafc; /* Soft off-white */
-            text-align: center;
-        }
-        .container {
-            max-width: 800px;
-            margin: auto;
-            background: #ffffff; /* Pure white */
-            padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Soft gray shadow */
-        }
-        h1 {
-            color: #1e293b; /* Dark slate */
-        }
-        h2, h3 {
-            color: #475569; /* Muted slate */
-        }
-        .skills-list {
-            list-style-type: none;
             padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+        
+        .resume-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.15);
+            border-radius: 20px;
+            overflow: hidden;
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            grid-template-columns: 300px 1fr;
+            min-height: 95vh;
+        }
+        
+        /* Left Sidebar */
+        .sidebar {
+            background: linear-gradient(180deg, #2c3e50 0%, #34495e 100%);
+            color: white;
+            padding: 30px 25px;
+            position: relative;
+        }
+        
+        .sidebar::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 3px;
+            height: 100%;
+            background: linear-gradient(180deg, #3498db, #2980b9);
+        }
+        
+        .profile-section {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        
+        .profile-image {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            background: linear-gradient(45deg, #3498db, #2980b9);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 20px;
+            font-size: 48px;
+            font-weight: bold;
+            box-shadow: 0 8px 25px rgba(52, 152, 219, 0.3);
+        }
+        
+        .name {
+            font-size: 24px;
+            font-weight: 700;
+            margin-bottom: 8px;
+            letter-spacing: 1px;
+        }
+        
+        .title {
+            font-size: 14px;
+            color: #bdc3c7;
+            font-weight: 300;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+        
+        .contact-section h3 {
+            color: #3498db;
+            font-size: 16px;
+            margin-bottom: 15px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            border-bottom: 2px solid #3498db;
+            padding-bottom: 8px;
+        }
+        
+        .contact-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 12px;
+            font-size: 13px;
+        }
+        
+        .contact-icon {
+            width: 16px;
+            height: 16px;
+            margin-right: 12px;
+            color: #3498db;
+        }
+        
+        .education-section {
+            margin-top: 30px;
+        }
+        
+        .education-item {
+            background: rgba(255,255,255,0.1);
+            padding: 15px;
+            border-radius: 8px;
+            margin-bottom: 15px;
+            border-left: 4px solid #3498db;
+        }
+        
+        .education-degree {
+            font-weight: 600;
+            font-size: 14px;
+            margin-bottom: 5px;
+        }
+        
+        .education-school {
+            font-size: 12px;
+            color: #bdc3c7;
+            margin-bottom: 5px;
+        }
+        
+        .education-score {
+            font-size: 12px;
+            color: #3498db;
+            font-weight: 600;
+        }
+        
+        /* Main Content */
+        .main-content {
+            padding: 40px;
+            background: white;
+        }
+        
+        .section {
+            margin-bottom: 40px;
+        }
+        
+        .section-title {
+            font-size: 28px;
+            color: #2c3e50;
+            margin-bottom: 20px;
+            position: relative;
+            padding-bottom: 10px;
+        }
+        
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 60px;
+            height: 3px;
+            background: linear-gradient(90deg, #3498db, #2980b9);
+            border-radius: 2px;
+        }
+        
+        /* Professional Summary */
+        .summary-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            gap: 15px;
+        }
+        
+        .summary-item {
+            background: #f8f9fa;
+            padding: 15px;
+            border-radius: 10px;
+            border-left: 4px solid #3498db;
+            font-size: 14px;
+            line-height: 1.5;
+        }
+        
+        /* Experience Section */
+        .experience-item {
+            background: white;
+            border: 1px solid #e9ecef;
+            border-radius: 15px;
+            padding: 25px;
+            margin-bottom: 25px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+            position: relative;
+        }
+        
+        .experience-item::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, #3498db, #2980b9);
+            border-radius: 15px 15px 0 0;
+        }
+        
+        .job-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 15px;
+        }
+        
+        .job-title {
+            font-size: 20px;
+            font-weight: 700;
+            color: #2c3e50;
+            margin-bottom: 5px;
+        }
+        
+        .company {
+            font-size: 16px;
+            color: #3498db;
+            font-weight: 600;
+        }
+        
+        .duration {
+            font-size: 14px;
+            color: #7f8c8d;
+            background: #ecf0f1;
+            padding: 5px 15px;
+            border-radius: 20px;
+        }
+        
+        .project {
+            background: #f8f9fa;
+            margin: 15px 0;
+            padding: 20px;
+            border-radius: 10px;
+            border-left: 4px solid #e74c3c;
+        }
+        
+        .project-title {
+            font-size: 16px;
+            font-weight: 600;
+            color: #e74c3c;
+            margin-bottom: 10px;
+        }
+        
+        .project-meta {
+            display: flex;
+            gap: 20px;
+            margin-bottom: 10px;
+            font-size: 13px;
+            color: #7f8c8d;
+        }
+        
+        .environment {
+            background: white;
+            padding: 10px;
+            border-radius: 8px;
+            margin: 10px 0;
+        }
+        
+        .environment-title {
+            font-weight: 600;
+            margin-bottom: 5px;
+            color: #2c3e50;
+        }
+        
+        .tech-stack {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 6px;
+        }
+        
+        .tech-tag {
+            background: #3498db;
+            color: white;
+            padding: 4px 8px;
+            border-radius: 12px;
+            font-size: 11px;
+            font-weight: 500;
+        }
+        
+        .responsibilities {
+            margin-top: 15px;
+        }
+        
+        .responsibilities ul {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .responsibilities li {
+            padding: 8px 0;
+            padding-left: 20px;
+            position: relative;
+            font-size: 14px;
+            line-height: 1.5;
+        }
+        
+        .responsibilities li::before {
+            content: '▶';
+            position: absolute;
+            left: 0;
+            color: #3498db;
+            font-size: 12px;
+        }
+        
+        /* Skills Grid */
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+        }
+        
+        .skill-card {
+            background: white;
+            border: 1px solid #e9ecef;
+            border-radius: 15px;
+            padding: 20px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .skill-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, #3498db, #2980b9);
+        }
+        
+        .skill-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 35px rgba(52, 152, 219, 0.15);
+        }
+        
+        .skill-category {
+            font-size: 16px;
+            font-weight: 700;
+            color: #2c3e50;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
             gap: 10px;
         }
-        .skills-list li {
-            background: #e0f2fe; /* Light teal */
-            padding: 10px;
-            border-radius: 4px;
-            text-align: center;
+        
+        .skill-tags {
             display: flex;
-            flex-direction: column;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+        
+        .skill-tag {
+            display: inline-flex;
             align-items: center;
+            gap: 6px;
+            background: #f8f9fa;
+            color: #2c3e50;
+            padding: 8px 12px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: 500;
+            border: 1px solid #e9ecef;
+            transition: all 0.2s ease;
         }
-        .skill-logo {
-            max-width: 50px; /* Uniform logo size */
-            height: auto;
-            margin-bottom: 8px;
+        
+        .skill-tag:hover {
+            background: #3498db;
+            color: white;
+            transform: scale(1.05);
+            border-color: #3498db;
         }
-        .docker-logo {
-            max-width: 150px; /* Larger Docker logo for header */
-            margin-bottom: 20px;
+        
+        .skill-icon {
+            width: 16px;
+            height: 16px;
+            object-fit: contain;
+        }
+        
+        .aws-tag {
+            background: #ff9900;
+            color: white;
+            border-color: #ff9900;
+        }
+        
+        .aws-tag:hover {
+            background: #e88800;
+        }
+        
+        .aws-services {
+            font-size: 10px;
+            color: #7f8c8d;
+            margin-top: 8px;
+            font-style: italic;
+            line-height: 1.3;
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            .resume-container {
+                grid-template-columns: 1fr;
+                margin: 10px;
+            }
+            
+            .sidebar {
+                order: 2;
+            }
+            
+            .main-content {
+                order: 1;
+                padding: 20px;
+            }
+            
+            .summary-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .skills-grid {
+                grid-template-columns: 1fr;
+            }
         }
     </style>
 </head>
 <body>
-    <div class="container">
-        <img src="https://www.docker.com/wp-content/uploads/2022/03/vertical-logo-monochromatic.png" alt="Docker Logo" class="docker-logo">
-        <h1>Charan</h1>
-        <h2>DevOps Engineer</h2>
-        <h3>Skills</h3>
-        <ul class="skills-list">
-            <li>
-                <img src="https://www.ansible.com/hubfs/2016_Images/Brand%20Images/ansible_icon_small.png" alt="Ansible Logo" class="skill-logo">
-                Ansible
-            </li>
-            <li>
-                <img src="https://www.docker.com/wp-content/uploads/2022/03/vertical-logo-monochromatic.png" alt="Docker Logo" class="skill-logo">
-                Docker
-            </li>
-            <li>
-                <img src="https://kubernetes.io/images/favicon.png" alt="Kubernetes Logo" class="skill-logo">
-                Kubernetes
-            </li>
-            <li>
-                <img src="https://d1.awsstatic.com/logos/aws-logo-lockups/ARCH_AWS-Logo_White-Update.21b66a26a7e0a1a4df78f19a86c335be5997ce33.png" alt="AWS Logo" class="skill-logo">
-                AWS
-            </li>
-            <li>
-                <img src="https://www.hashicorp.com/_next/image?url=/images/brands/terraform/brand-terraform-icon-color.svg&w=64&q=75" alt="Terraform Logo" class="skill-logo">
-                Terraform
-            </li>
-            <li>
-                <img src="https://www.jenkins.io/images/logos/jenkins/jenkins.png" alt="Jenkins Logo" class="skill-logo">
-                Jenkins
-            </li>
-            <li>
-                <img src="https://git-scm.com/images/logos/downloads/Git-Icon-1788C.png" alt="Git Logo" class="skill-logo">
-                Git
-            </li>
-            <li>
-                <img src="https://d33wubrfki0l68.cloudfront.net/e7b74b2e2c1673c74337c307d6901e873aaffd12/6c8a0/images/hero-logos/cicd.png" alt="CI/CD Logo" class="skill-logo">
-                CI/CD
-            </li>
-            <li>
-                <img src="https://www.python.org/static/community_logos/python-logo-master-v3-TM.png" alt="Python Logo" class="skill-logo">
-                Python
-            </li>
-            <li>
-                <img src="https://upload.wikimedia.org/wikipedia/commons/3/3f/Tux.png" alt="Linux Logo" class="skill-logo">
-                Linux
-            </li>
-            <li>
-                <img src="https://prometheus.io/assets/favicons/favicon.png" alt="Prometheus Logo" class="skill-logo">
-                Prometheus
-            </li>
-            <li>
-                <img src="https://grafana.com/static/img/grafana_icon.svg" alt="Grafana Logo" class="skill-logo">
-                Grafana
-            </li>
-            <li>
-                <img src="https://upload.wikimedia.org/wikipedia/commons/7/79/Bash_Logo_black_and_white.svg" alt="Bash Logo" class="skill-logo">
-                Bash
-            </li>
-            <li>
-                <img src="https://azure.microsoft.com/en-us/images/microsoft-logo.svg" alt="Azure Logo" class="skill-logo">
-                Azure
-            </li>
-            <li>
-                <img src="https://helm.sh/img/helm.svg" alt="Helm Logo" class="skill-logo">
-                Helm
-            </li>
-        </ul>
-    </div>
-</body>
-</html>
+    <div class="resume-container">
+        <!-- Left Sidebar -->
+        <aside class="sidebar">
+            <div class="profile-section">
+                <div class="profile-image">SP</div>
+                <div class="name">SIVA PRASAD</div>
+                <div class="title">DevOps Engineer</div>
+            </div>
+            
+            <div class="contact-section">
+                <h3>Contact</h3>
+                <div class="contact-item">
+                    <span class="contact-icon">📧</span>
+                    <a href="mailto:tellagorlasivaprasad1996@gmail.com" style="color: #bdc3c7; text-decoration: none;">tellagorlasivaprasad1996@gmail.com</a>
+                </div>
+                <div class="contact-item">
+                    <span class="contact-icon">📱</span>
+                    <span>+91-9492925563</span>
+                </div>
+                <div class="contact-item">
+                    <span class="contact-icon">📍</span>
+                    <span>Bangalore, India</span>
+                </div>
+            </div>
+            
+            <div class="education-section">
+                <h3>Education</h3>
+                <div class="education-item">
+                    <div class="education-degree">B.Tech in EEE</div>
+                    <div class="education-school">JNTUK, Kakinada</div>
+                    <div class=&q...
