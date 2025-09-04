@@ -11,155 +11,147 @@
             box-sizing: border-box;
         }
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            line-height: 1.5;
+            font-family: 'Segoe UI', Tahoma, sans-serif;
+            line-height: 1.4;
             color: #333;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            background: linear-gradient(135deg, #667eea, #764ba2);
             min-height: 100vh;
-            padding: 10px;
+            padding: 5px;
         }
         .resume-container {
-            max-width: 1000px;
+            max-width: 900px;
             margin: 0 auto;
             background: white;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-            border-radius: 10px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+            border-radius: 8px;
             overflow: hidden;
             display: grid;
-            grid-template-columns: 250px 1fr;
-            min-height: 90vh;
+            grid-template-columns: 200px 1fr;
+            min-height: 85vh;
         }
         .sidebar {
-            background: linear-gradient(180deg, #2c3e50 0%, #34495e 100%);
+            background: linear-gradient(180deg, #2c3e50, #34495e);
             color: white;
-            padding: 20px;
-            position: relative;
+            padding: 15px;
         }
         .sidebar::before {
             content: '';
             position: absolute;
             top: 0;
             right: 0;
-            width: 2px;
+            width: 1px;
             height: 100%;
-            background: linear-gradient(180deg, #3498db, #2980b9);
+            background: #3498db;
         }
         .profile-section {
             text-align: center;
-            margin-bottom: 20px;
+            margin-bottom: 15px;
         }
         .profile-image {
-            width: 80px;
-            height: 80px;
+            width: 60px;
+            height: 60px;
             border-radius: 50%;
-            background: linear-gradient(45deg, #3498db, #2980b9);
-            margin: 0 auto 10px;
-            box-shadow: 0 4px 15px rgba(52, 152, 219, 0.3);
+            background: #3498db;
+            margin: 0 auto 8px;
+            box-shadow: 0 3px 10px rgba(52, 152, 219, 0.2);
         }
         .name {
-            font-size: 18px;
+            font-size: 16px;
             font-weight: 700;
-            margin-bottom: 5px;
-            letter-spacing: 0.5px;
+            margin-bottom: 3px;
         }
         .title {
-            font-size: 12px;
+            font-size: 10px;
             color: #bdc3c7;
-            font-weight: 300;
             text-transform: uppercase;
-            letter-spacing: 1px;
+            letter-spacing: 0.5px;
         }
         .contact-section h3 {
             color: #3498db;
-            font-size: 14px;
-            margin-bottom: 10px;
+            font-size: 12px;
+            margin-bottom: 8px;
             text-transform: uppercase;
-            letter-spacing: 0.5px;
             border-bottom: 1px solid #3498db;
-            padding-bottom: 5px;
+            padding-bottom: 3px;
         }
         .contact-item {
             display: flex;
             align-items: center;
-            margin-bottom: 8px;
-            font-size: 12px;
+            margin-bottom: 6px;
+            font-size: 11px;
         }
         .contact-icon {
-            width: 14px;
-            height: 14px;
-            margin-right: 8px;
+            width: 12px;
+            height: 12px;
+            margin-right: 6px;
             color: #3498db;
         }
         .education-section {
-            margin-top: 20px;
+            margin-top: 15px;
         }
         .education-item {
             background: rgba(255,255,255,0.1);
-            padding: 10px;
-            border-radius: 6px;
-            margin-bottom: 10px;
-            border-left: 3px solid #3498db;
+            padding: 8px;
+            border-radius: 4px;
+            margin-bottom: 8px;
+            border-left: 2px solid #3498db;
         }
         .education-degree {
             font-weight: 600;
-            font-size: 13px;
-            margin-bottom: 3px;
+            font-size: 12px;
+            margin-bottom: 2px;
         }
-        .education-school {
-            font-size: 11px;
+        .education-school, .education-score {
+            font-size: 10px;
             color: #bdc3c7;
-            margin-bottom: 3px;
         }
         .education-score {
-            font-size: 11px;
             color: #3498db;
             font-weight: 600;
         }
         .main-content {
-            padding: 20px;
-            background: white;
+            padding: 15px;
         }
         .section {
-            margin-bottom: 20px;
+            margin-bottom: 15px;
         }
         .section-title {
-            font-size: 20px;
+            font-size: 18px;
             color: #2c3e50;
-            margin-bottom: 10px;
+            margin-bottom: 8px;
             position: relative;
-            padding-bottom: 5px;
+            padding-bottom: 3px;
         }
         .section-title::after {
             content: '';
             position: absolute;
             bottom: 0;
             left: 0;
-            width: 40px;
-            height: 2px;
-            background: linear-gradient(90deg, #3498db, #2980b9);
+            width: 30px;
+            height: 1px;
+            background: #3498db;
             border-radius: 1px;
         }
         .summary-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 10px;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 8px;
         }
         .summary-item {
             background: #f8f9fa;
-            padding: 10px;
-            border-radius: 6px;
-            border-left: 3px solid #3498db;
-            font-size: 13px;
-            line-height: 1.4;
+            padding: 8px;
+            border-radius: 4px;
+            border-left: 2px solid #3498db;
+            font-size: 12px;
+            line-height: 1.3;
         }
         .experience-item {
             background: white;
             border: 1px solid #e9ecef;
-            border-radius: 10px;
-            padding: 15px;
-            margin-bottom: 15px;
-            box-shadow: 0 3px 10px rgba(0,0,0,0.06);
-            position: relative;
+            border-radius: 6px;
+            padding: 10px;
+            margin-bottom: 10px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
         }
         .experience-item::before {
             content: '';
@@ -167,113 +159,109 @@
             top: 0;
             left: 0;
             right: 0;
-            height: 3px;
-            background: linear-gradient(90deg, #3498db, #2980b9);
-            border-radius: 10px 10px 0 0;
+            height: 2px;
+            background: #3498db;
+            border-radius: 6px 6px 0 0;
         }
         .job-header {
             display: flex;
             justify-content: space-between;
             align-items: flex-start;
-            margin-bottom: 10px;
+            margin-bottom: 8px;
         }
         .job-title {
-            font-size: 16px;
+            font-size: 14px;
             font-weight: 700;
             color: #2c3e50;
-            margin-bottom: 3px;
+            margin-bottom: 2px;
         }
         .company {
-            font-size: 14px;
+            font-size: 12px;
             color: #3498db;
             font-weight: 600;
         }
         .duration {
-            font-size: 12px;
+            font-size: 11px;
             color: #7f8c8d;
             background: #ecf0f1;
-            padding: 3px 10px;
-            border-radius: 15px;
+            padding: 2px 8px;
+            border-radius: 12px;
         }
         .project {
             background: #f8f9fa;
-            margin: 10px 0;
-            padding: 15px;
-            border-radius: 6px;
-            border-left: 3px solid #e74c3c;
+            margin: 8px 0;
+            padding: 10px;
+            border-radius: 4px;
+            border-left: 2px solid #e74c3c;
         }
         .project-title {
-            font-size: 14px;
+            font-size: 13px;
             font-weight: 600;
             color: #e74c3c;
-            margin-bottom: 8px;
+            margin-bottom: 6px;
         }
         .project-meta {
             display: flex;
-            gap: 15px;
-            margin-bottom: 8px;
-            font-size: 12px;
+            gap: 10px;
+            margin-bottom: 6px;
+            font-size: 11px;
             color: #7f8c8d;
         }
         .environment {
             background: white;
-            padding: 8px;
-            border-radius: 6px;
-            margin: 8px 0;
+            padding: 6px;
+            border-radius: 4px;
+            margin: 6px 0;
         }
         .environment-title {
             font-weight: 600;
-            margin-bottom: 4px;
+            font-size: 12px;
+            margin-bottom: 3px;
             color: #2c3e50;
-            font-size: 13px;
         }
         .tech-stack {
             display: flex;
             flex-wrap: wrap;
-            gap: 5px;
+            gap: 4px;
         }
         .tech-tag {
             background: #3498db;
             color: white;
-            padding: 3px 6px;
-            border-radius: 10px;
-            font-size: 10px;
+            padding: 2px 5px;
+            border-radius: 8px;
+            font-size: 9px;
             font-weight: 500;
         }
         .responsibilities {
-            margin-top: 10px;
+            margin-top: 8px;
         }
         .responsibilities ul {
             list-style: none;
-            padding: 0;
         }
         .responsibilities li {
-            padding: 6px 0;
-            padding-left: 15px;
+            padding: 5px 0 5px 12px;
             position: relative;
-            font-size: 13px;
-            line-height: 1.4;
+            font-size: 12px;
+            line-height: 1.3;
         }
         .responsibilities li::before {
             content: '▶';
             position: absolute;
             left: 0;
             color: #3498db;
-            font-size: 10px;
+            font-size: 9px;
         }
         .skills-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 15px;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 10px;
         }
         .skill-card {
             background: white;
             border: 1px solid #e9ecef;
-            border-radius: 10px;
-            padding: 15px;
-            box-shadow: 0 3px 10px rgba(0,0,0,0.06);
-            transition: all 0.2s ease;
-            position: relative;
+            border-radius: 6px;
+            padding: 10px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
         }
         .skill-card::before {
             content: '';
@@ -281,36 +269,35 @@
             top: 0;
             left: 0;
             right: 0;
-            height: 3px;
-            background: linear-gradient(90deg, #3498db, #2980b9);
+            height: 2px;
+            background: #3498db;
         }
         .skill-card:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 10px 20px rgba(52, 152, 219, 0.1);
+            transform: translateY(-2px);
+            box-shadow: 0 8px 15px rgba(52, 152, 219, 0.1);
         }
         .skill-category {
-            font-size: 14px;
+            font-size: 13px;
             font-weight: 700;
             color: #2c3e50;
-            margin-bottom: 10px;
+            margin-bottom: 8px;
             display: flex;
             align-items: center;
-            gap: 8px;
+            gap: 6px;
         }
         .skill-tags {
             display: flex;
             flex-wrap: wrap;
-            gap: 6px;
+            gap: 5px;
         }
         .skill-tag {
             background: #f8f9fa;
             color: #2c3e50;
-            padding: 6px 10px;
-            border-radius: 15px;
-            font-size: 11px;
+            padding: 5px 8px;
+            border-radius: 12px;
+            font-size: 10px;
             font-weight: 500;
             border: 1px solid #e9ecef;
-            transition: all 0.2s ease;
         }
         .skill-tag:hover {
             background: #3498db;
@@ -318,9 +305,8 @@
             border-color: #3498db;
         }
         .skill-icon {
-            width: 14px;
-            height: 14px;
-            object-fit: contain;
+            width: 12px;
+            height: 12px;
         }
         .aws-tag {
             background: #ff9900;
@@ -331,28 +317,21 @@
             background: #e88800;
         }
         .aws-services {
-            font-size: 9px;
+            font-size: 8px;
             color: #7f8c8d;
-            margin-top: 6px;
+            margin-top: 4px;
             font-style: italic;
-            line-height: 1.2;
         }
         @media (max-width: 768px) {
             .resume-container {
                 grid-template-columns: 1fr;
-                margin: 5px;
+                margin: 3px;
             }
-            .sidebar {
-                order: 2;
+            .sidebar, .main-content {
+                order: unset;
+                padding: 10px;
             }
-            .main-content {
-                order: 1;
-                padding: 15px;
-            }
-            .summary-grid {
-                grid-template-columns: 1fr;
-            }
-            .skills-grid {
+            .summary-grid, .skills-grid {
                 grid-template-columns: 1fr;
             }
         }
@@ -363,8 +342,7 @@
         <aside class="sidebar">
             <div class="profile-section">
                 <div class="profile-image">
-                    <img src="https://raw.githubusercontent.com/cherangithub/static-pages/main/images/Pasted image.png"
-                        alt="Profile Image" style="width:80px; height:80px; border-radius:50%;">
+                    <img src="https://raw.githubusercontent.com/cherangithub/static-pages/main/images/Pasted image.png" alt="Profile Image" style="width:60px; height:60px; border-radius:50%;">
                 </div>
                 <div class="name">Lakshmi Charan Tangisetti</div>
                 <div class="title">DevOps Engineer</div>
@@ -373,7 +351,7 @@
                 <h3>Contact</h3>
                 <div class="contact-item">
                     <span class="contact-icon">📧</span>
-                    <a href="mailto:charantangisetti@gmail.com" title="Email Lakshmi Charan Tangiseti" style="color: #bdc3c7; text-decoration: none;">charantangisetti@gmail.com</a>
+                    <a href="mailto:charantangisetti@gmail.com" style="color: #bdc3c7; text-decoration: none;">charantangisetti@gmail.com</a>
                 </div>
                 <div class="contact-item">
                     <span class="contact-icon">📱</span>
@@ -393,7 +371,7 @@
                 </div>
                 <h3>Blogs</h3>
                 <div class="education-item">
-                    <ul style="list-style: disc; padding-left: 15px;">
+                    <ul style="list-style: disc; padding-left: 12px;">
                         <li><a href="https://www.linkedin.com/posts/buildbot-technologies-private-limited_activity-7363525800857362432-0UKG" target="_blank" style="color: #3498db; text-decoration: none;">Securing Nginx with Certificate Manager SSL and Passphrase in Docker</a></li>
                         <li><a href="https://www.linkedin.com/posts/buildbot-technologies-private-limited_activity-7308377049805557760-s7Ry" target="_blank" style="color: #3498db; text-decoration: none;">Deploying a Serverless Django Application Using Zappa</a></li>
                         <li><a href="https://www.linkedin.com/posts/buildbot-technologies-private-limited_activity-7287765647592210432-GHRM" target="_blank" style="color: #3498db; text-decoration: none;">Kubeadm Reset and ETCD Backup & Restore Process in Kubernetes</a></li>
@@ -418,36 +396,16 @@
             <section class="section">
                 <h2 class="section-title">Professional Summary</h2>
                 <div class="summary-grid">
-                    <div class="summary-item">
-                        Accomplished DevOps Engineer with over <strong>3 years</strong> of specialized experience in DevOps practices and <strong>3+ years</strong> in the IT industry. Expert in designing and implementing CI/CD pipelines, cloud infrastructure, container orchestration, and automation to optimize software development and deployment.
-                    </div>
-                    <div class="summary-item">
-                        <strong>DevOps Expertise:</strong> Proficient in Git, GitHub Actions, GitLab Actions, Bitbucket, Jenkins, Ansible, Docker, On-premises Self-managed Kubernetes, Nginx, Kafka, WSO2, K9s, Postgres, Helm, Trivy, Qualys, and Grafana for automated build, deployment, and monitoring workflows.
-                    </div>
-                    <div class="summary-item">
-                        <strong>Cloud Proficiency:</strong> Extensive experience with AWS (EC2, ELB, S3, IAM, VPC, Route53, RDS, CloudWatch, Load Balancer, ECR, EKS, CloudFormation, Auto Scaling) and Azure, ensuring robust and scalable cloud environments.
-                    </div>
-                    <div class="summary-item">
-                        <strong>Containerization & Orchestration:</strong> Skilled in Docker for containerization and Kubernetes for orchestration, managing images via Private Registry and AWS ECR for seamless deployments.
-                    </div>
-                    <div class="summary-item">
-                        <strong>Monitoring & Quality:</strong> Experienced in ensuring code quality and system performance using Grafana, Loki, Prometheus, ELK Stack, and Kibana for comprehensive monitoring and analytics.
-                    </div>
-                    <div class="summary-item">
-                        <strong>Automation & Scripting:</strong> Proficient in Python and Shell scripting for build automation and advanced Linux command-line operations.
-                    </div>
-                    <div class="summary-item">
-                        <strong>Databases:</strong> Expertise in managing Postgres, MySQL, AWS RDS, and Redis databases for high-performance applications.
-                    </div>
-                    <div class="summary-item">
-                        <strong>Server Management:</strong> Skilled in VMware ESXi for virtualization and server optimization.
-                    </div>
-                    <div class="summary-item">
-                        <strong>Kubernetes Networking:</strong> Proficient in Flannel, Calico, and MetalLB for efficient Kubernetes networking and load balancing.
-                    </div>
-                    <div class="summary-item">
-                        <strong>Networking:</strong> Experienced with Cisco and Unifi routers for robust network configurations.
-                    </div>
+                    <div class="summary-item">Accomplished DevOps Engineer with over <strong>3 years</strong> of specialized experience in DevOps practices and <strong>3+ years</strong> in the IT industry. Expert in designing and implementing CI/CD pipelines, cloud infrastructure, container orchestration, and automation.</div>
+                    <div class="summary-item"><strong>DevOps Expertise:</strong> Proficient in Git, GitHub Actions, GitLab Actions, Bitbucket, Jenkins, Ansible, Docker, Kubernetes, Nginx, Kafka, WSO2, K9s, Postgres, Helm, Trivy, Qualys, and Grafana.</div>
+                    <div class="summary-item"><strong>Cloud Proficiency:</strong> Extensive experience with AWS (EC2, ELB, S3, IAM, VPC, Route53, RDS, CloudWatch, ECR, EKS, CloudFormation, Auto Scaling) and Azure.</div>
+                    <div class="summary-item"><strong>Containerization & Orchestration:</strong> Skilled in Docker for containerization and Kubernetes for orchestration, managing images via Private Registry and AWS ECR.</div>
+                    <div class="summary-item"><strong>Monitoring & Quality:</strong> Experienced in using Grafana, Loki, Prometheus, ELK Stack, and Kibana for monitoring and analytics.</div>
+                    <div class="summary-item"><strong>Automation & Scripting:</strong> Proficient in Python and Shell scripting for build automation and Linux operations.</div>
+                    <div class="summary-item"><strong>Databases:</strong> Expertise in Postgres, MySQL, AWS RDS, and Redis databases.</div>
+                    <div class="summary-item"><strong>Server Management:</strong> Skilled in VMware ESXi for virtualization and server optimization.</div>
+                    <div class="summary-item"><strong>Kubernetes Networking:</strong> Proficient in Flannel, Calico, and MetalLB for Kubernetes networking.</div>
+                    <div class="summary-item"><strong>Networking:</strong> Experienced with Cisco and Unifi routers.</div>
                 </div>
             </section>
             <section class="section">
@@ -486,20 +444,20 @@
                             </div>
                         </div>
                         <div class="responsibilities">
-                            <h4 style="color: #2c3e50; margin-bottom: 8px;">Key Responsibilities & Achievements:</h4>
+                            <h4 style="color: #2c3e50; margin-bottom: 6px;">Key Responsibilities & Achievements:</h4>
                             <ul>
-                                <li><strong>Orchestrated Kubernetes Clusters</strong>: Designed and managed self-hosted, on-premises Kubernetes clusters with three master nodes, writing custom Ansible scripts to automate deployment and configuration for high availability and scalability.</li>
-                                <li><strong>Developed CI/CD Pipelines</strong>: Built and optimized CI/CD pipelines using Bitbucket Pipelines, integrating with Git and Bitbucket repositories to enable seamless, automated software delivery and deployment.</li>
-                                <li><strong>Managed Containerized Applications</strong>: Deployed and maintained applications on Kubernetes, expertly handling pods, services, namespaces, and Helm charts to ensure efficient container orchestration.</li>
-                                <li><strong>Created Docker Artifacts</strong>: Authored Dockerfiles and managed Docker images, utilizing Private Docker Hub and AWS ECR registries for secure and scalable container storage.</li>
-                                <li><strong>Performed Advanced Git Operations</strong>: Executed complex Git workflows, including stash, cherry-pick, revert, reset, and rebase, to maintain clean and efficient version control processes.</li>
-                                <li><strong>Automated Infrastructure with Ansible</strong>: Implemented Ansible for server configuration, utilizing roles and Ansible Vault for secure automation of infrastructure provisioning and management.</li>
-                                <li><strong>Managed AWS Infrastructure</strong>: Administered AWS services, including EC2, IAM, S3, ECR, EKS, Route53, VPCs, subnets, RDS to build scalable, secure, and cost-effective cloud environments.</li>
-                                <li><strong>Enhanced Security</strong>: Configured Qualys for vulnerability scanning, ensuring robust security compliance across systems and applications.</li>
-                                <li><strong>Optimized Kubernetes Networking</strong>: Maintained Kubernetes networking with Flannel and implemented MetalLB as a load balancer to ensure efficient traffic management and high availability.</li>
-                                <li><strong>Implemented Monitoring Solutions</strong>: Designed and optimized monitoring and logging systems using the ELK Stack, Prometheus, and Grafana to ensure system reliability, performance, and proactive issue resolution.</li>
-                                <li><strong>Automated Processes</strong>: Leveraged Shell and Python scripting to automate build and operational workflows, streamlining repetitive tasks and enhancing efficiency.</li>
-                                <li><strong>Collaborated Cross-Functionally</strong>: Partnered with development and operations teams to align DevOps practices, improve security posture, and maintain comprehensive documentation for all processes.</li>
+                                <li><strong>Orchestrated Kubernetes Clusters</strong>: Designed and managed self-hosted Kubernetes clusters with three master nodes, using Ansible scripts for automated deployment and configuration.</li>
+                                <li><strong>Developed CI/CD Pipelines</strong>: Built CI/CD pipelines using Bitbucket Pipelines, integrating with Git and Bitbucket for automated software delivery.</li>
+                                <li><strong>Managed Containerized Applications</strong>: Deployed applications on Kubernetes, handling pods, services, namespaces, and Helm charts.</li>
+                                <li><strong>Created Docker Artifacts</strong>: Authored Dockerfiles and managed images in Private Docker Hub and AWS ECR.</li>
+                                <li><strong>Performed Advanced Git Operations</strong>: Executed Git workflows (stash, cherry-pick, revert, reset, rebase) for efficient version control.</li>
+                                <li><strong>Automated Infrastructure with Ansible</strong>: Used Ansible roles and Vault for secure infrastructure automation.</li>
+                                <li><strong>Managed AWS Infrastructure</strong>: Administered AWS services (EC2, IAM, S3, ECR, EKS, Route53, VPCs, RDS) for scalable cloud environments.</li>
+                                <li><strong>Enhanced Security</strong>: Configured Qualys for vulnerability scanning to ensure security compliance.</li>
+                                <li><strong>Optimized Kubernetes Networking</strong>: Used Flannel and MetalLB for efficient traffic management and high availability.</li>
+                                <li><strong>Implemented Monitoring Solutions</strong>: Designed monitoring systems with ELK Stack, Prometheus, and Grafana for performance and issue resolution.</li>
+                                <li><strong>Automated Processes</strong>: Used Shell and Python scripting to automate workflows, enhancing efficiency.</li>
+                                <li><strong>Collaborated Cross-Functionally</strong>: Partnered with teams to align DevOps practices and maintain documentation.</li>
                             </ul>
                         </div>
                     </div>
@@ -526,18 +484,18 @@
                             </div>
                         </div>
                         <div class="responsibilities">
-                            <h4 style="color: #2c3e50; margin-bottom: 8px;">Key Responsibilities:</h4>
+                            <h4 style="color: #2c3e50; margin-bottom: 6px;">Key Responsibilities:</h4>
                             <ul>
-                                <li><strong>Orchestrated AKS Clusters</strong>: Designed and managed Azure Kubernetes Service (AKS) clusters, leveraging Helm charts and Lens for efficient deployment, configuration, and monitoring of containerized applications.</li>
-                                <li><strong>Developed CI/CD Pipelines</strong>: Built and optimized CI/CD pipelines using Azure DevOps and Azure Pipelines, integrating with Git repositories and Jira for streamlined code delivery and deployment automation.</li>
-                                <li><strong>Managed Containerized Applications</strong>: Deployed and maintained applications on AKS, utilizing Docker for containerization and Nginx as a reverse proxy to ensure scalable and reliable service delivery.</li>
-                                <li><strong>Created Docker Artifacts</strong>: Authored Dockerfiles and managed container images in Azure Container Registry, enabling secure and efficient storage and deployment of application artifacts.</li>
-                                <li><strong>Performed Advanced Git Operations</strong>: Executed complex Git workflows (e.g., branching, merging, rebasing) to maintain robust version control, integrated with Azure DevOps for seamless collaboration.</li>
-                                <li><strong>Implemented Monitoring Solutions</strong>: Designed and deployed monitoring systems using Prometheus and Grafana, configuring dashboards and alerts to ensure real-time performance tracking and proactive issue resolution for infrastructure.</li>
-                                <li><strong>Managed Azure Infrastructure</strong>: Administered Azure services, including Virtual Machines, Blob Storage, Virtual Networks, and AKS, to build secure, scalable, and cost-optimized cloud environments.</li>
-                                <li><strong>Enhanced System Reliability</strong>: Configured Nginx for load balancing and high availability, optimizing traffic management for AKS-hosted applications.</li>
-                                <li><strong>Automated Deployment Processes</strong>: Leveraged Azure DevOps for automated infrastructure provisioning and application deployments, reducing manual effort and improving release cycles.</li>
-                                <li><strong>Collaborated Cross-Functionally</strong>: Partnered with development and operations teams via Jira to align DevOps practices, enhance system performance, and maintain comprehensive documentation for all processes.</li>
+                                <li><strong>Orchestrated AKS Clusters</strong>: Managed Azure Kubernetes Service (AKS) clusters using Helm charts and Lens for efficient deployment and monitoring.</li>
+                                <li><strong>Developed CI/CD Pipelines</strong>: Built CI/CD pipelines with Azure DevOps and Azure Pipelines, integrated with Git and Jira.</li>
+                                <li><strong>Managed Containerized Applications</strong>: Deployed applications on AKS using Docker and Nginx for scalable service delivery.</li>
+                                <li><strong>Created Docker Artifacts</strong>: Authored Dockerfiles and managed images in Azure Container Registry.</li>
+                                <li><strong>Performed Advanced Git Operations</strong>: Executed Git workflows (branching, merging, rebasing) with Azure DevOps integration.</li>
+                                <li><strong>Implemented Monitoring Solutions</strong>: Deployed Prometheus and Grafana for real-time performance tracking and alerts.</li>
+                                <li><strong>Managed Azure Infrastructure</strong>: Administered Azure services (Virtual Machines, Blob Storage, Virtual Networks, AKS).</li>
+                                <li><strong>Enhanced System Reliability</strong>: Configured Nginx for load balancing and high availability in AKS applications.</li>
+                                <li><strong>Automated Deployment Processes</strong>: Used Azure DevOps for automated infrastructure and application deployments.</li>
+                                <li><strong>Collaborated Cross-Functionally</strong>: Worked with teams via Jira to align DevOps practices and document processes.</li>
                             </ul>
                         </div>
                     </div>
@@ -561,16 +519,16 @@
                             </div>
                         </div>
                         <div class="responsibilities">
-                            <h4 style="color: #2c3e50; margin-bottom: 8px;">Key Responsibilities & Achievements:</h4>
+                            <h4 style="color: #2c3e50; margin-bottom: 6px;">Key Responsibilities & Achievements:</h4>
                             <ul>
-                                <li><strong>Orchestrated AWS EKS Clusters</strong>: Designed and managed AWS Elastic Kubernetes Service (EKS) clusters, using Helm charts to deploy and configure containerized applications for high availability and scalability.</li>
-                                <li><strong>Developed CI/CD Pipelines</strong>: Built and optimized CI/CD pipelines using GitHub Actions, integrating with Git repositories to automate code builds, testing, and deployments to AWS EKS.</li>
-                                <li><strong>Managed Containerized Applications</strong>: Deployed and maintained applications on AWS EKS, leveraging Docker for containerization and Nginx for load balancing to ensure reliable and scalable service delivery.</li>
-                                <li><strong>Created Docker Artifacts</strong>: Authored Dockerfiles and managed container images in AWS Elastic Container Registry (ECR), ensuring secure and efficient storage and deployment of application artifacts.</li>
-                                <li><strong>Performed Advanced Git Operations</strong>: Executed complex Git workflows (e.g., branching, merging, rebasing) to maintain robust version control, integrated with GitHub Actions for seamless automation.</li>
-                                <li><strong>Optimized AWS Infrastructure</strong>: Administered AWS services, including EKS, ECR, and related cloud resources, to build secure, scalable, and cost-effective environments for the SEA.O.G project.</li>
-                                <li><strong>Enhanced System Performance</strong>: Configured Nginx as a reverse proxy and load balancer to optimize traffic management and ensure high availability for EKS-hosted applications.</li>
-                                <li><strong>Streamlined Deployment Processes</strong>: Automated infrastructure provisioning and application deployments using GitHub Actions and Helm, reducing manual effort and improving release efficiency.</li>
+                                <li><strong>Orchestrated AWS EKS Clusters</strong>: Managed AWS EKS clusters using Helm charts for high availability and scalability.</li>
+                                <li><strong>Developed CI/CD Pipelines</strong>: Built CI/CD pipelines with GitHub Actions for automated builds, testing, and deployments to EKS.</li>
+                                <li><strong>Managed Containerized Applications</strong>: Deployed applications on EKS using Docker and Nginx for reliable service delivery.</li>
+                                <li><strong>Created Docker Artifacts</strong>: Authored Dockerfiles and managed images in AWS ECR.</li>
+                                <li><strong>Performed Advanced Git Operations</strong>: Executed Git workflows with GitHub Actions integration.</li>
+                                <li><strong>Optimized AWS Infrastructure</strong>: Administered AWS services (EKS, ECR) for secure and scalable environments.</li>
+                                <li><strong>Enhanced System Performance</strong>: Configured Nginx for load balancing and high availability in EKS applications.</li>
+                                <li><strong>Streamlined Deployment Processes</strong>: Automated deployments using GitHub Actions and Helm.</li>
                             </ul>
                         </div>
                     </div>
